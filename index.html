@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Sudoku Solver</h1>
+        <br>
+        <div>
+
+            <!-- input div -->
+            <div>
+                <h3>Input your sudoku</h3>
+
+                <textarea name="" id="sudokuInput" cols="30" rows="10"></textarea><br><br>
+                <button id="uploadBtn">upload</button>
+
+                <div class="exampleDiv">
+                    <h4>Example:</h4>
+                    <p class="example">
+                        0 4 0 0 0 0 1 7 9 <br>
+                        0 0 2 0 0 8 0 5 4 <br>
+                        0 0 6 0 0 5 0 0 8 <br>
+                        0 8 0 0 7 0 9 1 0 <br>
+                        0 5 0 0 9 0 0 3 0 <br>
+                        0 1 9 0 6 0 0 4 0 <br>
+                        3 0 0 4 0 0 7 0 0 <br>
+                        5 7 0 1 0 0 2 0 0 <br>
+                        9 2 8 0 0 0 0 6 0 <br>
+                    </p>
+                    <ul>
+                        <li>blank spaces -> 0</li>
+                        <li>Seperated by single space</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- // sudoku div -->
+            <div>
+                <div class="sliderCont">
+                    <h3 for="speed">Speed</h3>
+                    <input id="speed" class="speedSlider" type="range" min="0" step="9" max="999">
+                </div>
+                <div id="root" class="root">
+                </div>
+                <h4 id="res" class="res"></h4>
+                <br>
+                <button id="solveBtn">solve</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

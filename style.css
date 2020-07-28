@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ddd;
+}
+
+h1 {
+    color: #1769aa;
+}
+
+.container {
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 80%;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 1px 1px 6px 5px #bbb;
+}
+
+.container>div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.exampleDiv {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.example {
+    background-color: #ddd;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+}
+
+.sliderCont{
+    display: flex;
+    align-items: center;
+}
+.sliderCont>h3{
+    margin-right: 0.5rem;
+}
+
+.speedSlider{
+    color: yellow;
+    /* background-color: teal; */
+}
+
+.root {
+    margin: 1rem auto;
+    text-align: center;
+    border: 1px solid black;
+    width: 350px;
+    display: grid;
+    grid-template-rows: repeat(9, 0.5fr);
+    grid-template-columns: repeat(9, 0.5fr);
+}
+
+/* sudoku design */
+
+.root>div {
+    padding: 0.5rem;
+    border: 1px solid #aaa;
+    vertical-align: middle;
+    background-color: white;
+    /* font-weight: bold; */
+}
+
+.root>div:nth-child(3n) {
+    border-right: 1px solid black;
+}
+
+.root>div:nth-child(9n+1) {
+    border-left: 1px solid black;
+}
+
+.root>div:nth-child(-n+9) {
+    border-top: 1px solid black;
+}
+
+.root>div:nth-child(n+73) {
+    border-bottom: 1px solid black;
+}
+
+.root>div:nth-child(n+19):nth-child(-n+27) {
+    border-bottom: 1px solid black;
+}
+
+.root>div:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 1px solid black;
+}
+
+/* sudoku desing end */
+
+button {
+    padding: 0.5rem 2rem;
+    background-color: #1769aa;
+    border: 0;
+    border-radius: 3px;
+    color: white;
+}
+
+#added, .success {
+    background-color: green;
+    color: white;
+}
+
+#removed, .failed {
+    background-color: red;
+    color: white;
+}
+
+.message {
+    color: white;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
